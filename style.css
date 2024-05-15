@@ -46,13 +46,13 @@ button {
   /* 600px -nél kisebb esetben */
   display: grid;
   grid-auto-flow: column; /*...álljon a grid*/
-  grid-template-columns: repeat(2, minmax(120px, 176px));
+  grid-template-columns: repeat(2, minmax(120px 176px));
   grid-template-rows: repeat(3, 165px);
   gap: 16px;
 }
 @media (min-width: 600px) {
   .second {
-    grid-template-columns: repeat(3, minmax(120px, 176px));
+    grid-template-columns: repeat(3, minmax(120px 176px));
     grid-template-rows: repeat(2, 165px);
   }
 }
