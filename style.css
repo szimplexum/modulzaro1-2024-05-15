@@ -11,7 +11,7 @@
 }
 
 .first {
-  width: 500px;
+  width: 50%;
   border: 1px sold gray;
 }
 @media (max-width: 1138px) {
@@ -26,7 +26,6 @@
 }
 .first p {
   font-size: 16px;
-  text-align: justify;
 }
 
 button {
