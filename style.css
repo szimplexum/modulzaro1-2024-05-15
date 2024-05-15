@@ -30,7 +30,8 @@
 
 button {
   background-color: rgb(79, 70, 229);
-  padding: 12px; /*A kérés így lett volna: padding-top:12px; padding-bottom:12px; de ezzel a megoldással szebb lett*/
+  padding: 12px 30px 12px 30px; 
+  height: 40px;
   color: white;
   transition: background-color 0.5s;
   border: 0px;
