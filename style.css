@@ -7,11 +7,11 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap:20px; /*Ez nem volt kérve, de szebb lett így*/
+  gap: 20px; /*Ez nem volt kérve, de szebb lett így*/
 }
 
 .first {
-  width: 50%;
+  width: 500px;
   border: 1px sold gray;
 }
 @media (max-width: 1138px) {
@@ -31,7 +31,7 @@
 
 button {
   background-color: rgb(79, 70, 229);
-  padding: 12px;
+  padding: 12px; /*A kérés így lett volna: padding-top:12px; padding-bottom:12px; de ezzel a megoldással szebb lett*/
   color: white;
   transition: background-color 0.5s;
   border: 0px;
@@ -45,25 +45,26 @@ button {
 .second {
   /* 600px -nél kisebb esetben */
   display: grid;
-  grid-auto-flow: column;  /*...álljon a grid*/
-  grid-template-columns: repeat(2, minmax(120px 176px));
+  grid-auto-flow: column; /*...álljon a grid*/
+  grid-template-columns: repeat(2, minmax(120px, 176px));
   grid-template-rows: repeat(3, 165px);
   gap: 16px;
 }
 @media (min-width: 600px) {
   .second {
-    grid-template-columns: repeat(3, minmax(120px 176px));
+    grid-template-columns: repeat(3, minmax(120px, 176px));
     grid-template-rows: repeat(2, 165px);
   }
 }
 .card {
   border: 1px solid rgb(243, 244, 246);
   border-radius: 12px;
+  margin: 8px; /*16px fele*/
   padding: 16px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-  &hover {
+  &:hover {
     border: 1px solid rgb(229, 231, 235);
   }
 }
@@ -83,29 +84,32 @@ button {
 
 /* Harmadik rész kezdete */
 .third {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 32px;
-    max-width: 512px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 32px;
+  padding-bottom: 32px; /*ez nem volt kérés, de szebb*/
+  max-width: 512px;
 }
 .third h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
-.third p {
-    color: rgb(107, 114, 128);
+.third p,
+a {
+  color: rgb(107, 114, 128);
 }
 .InputField {
-    min-width: 352px;
-    max-width: 448px;
-    border: 1px solid rgb(229, 231, 235);
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
+  min-width: 352px;
+  max-width: 448px;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
 }
 .thirdfoot {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  min-width: 352px;
+  max-width: 448px;
+  justify-content: space-between;
 }
